@@ -34,8 +34,9 @@ html, body {
 }
 .card {
     width: 90%;
-    min-width: 500px;
+    min-width: 375px;
     height: 80%;
+    min-height: 700px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 1px var(--grayish-blue);
@@ -49,6 +50,7 @@ html, body {
     height: 50%;
     background-image: url("../images/drawers.jpg");
     background-size: auto 120%;
+    background-position: center;
     background-repeat: no-repeat;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -59,14 +61,14 @@ html, body {
     height: 50%;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 35px;
 }
 
 .article .title {
     height: 40%;
 }
 .title h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: var(--font-bold);
     color: var(--very-dark-grayish-blue);
 }
