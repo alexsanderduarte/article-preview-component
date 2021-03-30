@@ -1,0 +1,179 @@
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+    --font-regular: 500;
+    --font-bold: 700;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size);
+    color: var(--desaturated-dark-blue);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-grayish-blue);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 700px;
+    height: 270px;
+    min-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 1px var(--grayish-blue);
+    display: flex;
+}
+
+.card .image{
+    width: 40%;
+    height: 100%;
+    background-image: url("../images/drawers.jpg");
+    background-size: 123% 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+.image img{
+    max-width: 125%;
+    height: auto;
+}
+
+.card .article {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.article .title {
+    height: 35%;
+}
+.title h1 {
+    font-size: 1.3rem;
+    font-weight: var(--font-bold);
+    color: var(--very-dark-grayish-blue);
+}
+
+.article .text {
+    height: 45%;
+}
+.text p {
+    line-height: 23px;
+}
+.article .social {
+    height: 20%;
+    display: flex;
+}
+
+.social .picture {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+.picture img {
+    width: auto;
+    border-radius: 50%;
+}
+
+.social .profileName {
+    width: 70%;
+}
+.profileName .name {
+    font-weight: var(--font-bold);
+    color: var(--very-dark-grayish-blue);
+}
+.profileName .date {
+    color: var(--grayish-blue);
+}
+.social .share {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#shareButton {
+    background-color: var(--light-grayish-blue);
+    height: 35px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#sharePopUp{
+    display: none;
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    width: 270px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: var(--grayish-blue);
+    letter-spacing: 5px;
+    left: -300%;
+    top: -200%;
+    box-shadow: 0 0 20px var(--grayish-blue);
+
+}
+.sharePopup img {
+    background-color: var(--very-dark-grayish-blue);
+    z-index: 2;
+}
+
+.sharePopUp2 {
+    background-color: var(--very-dark-grayish-blue);
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 1;
+    bottom: -15%;
+    right: 44%;
+}
+#mobile{
+    display: none;
+}
+
+@keyframes show {
+    from {
+        transform: scale(0.5);
+        opacity: 0.5;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    } to {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+}
